@@ -14,7 +14,7 @@ import scala.concurrent.duration._
 import scala.io.StdIn
 import java.util.{Calendar, Date}
 
-object WebServer2 {
+object WebServer {
 
   case class Transaction(userId: String, offer: Int, typ:String, date:String)
   case object GetTransactions
@@ -41,9 +41,10 @@ object WebServer2 {
         log.info(s"Transaction complete: $userId, $offer, $typ, $date")
       case GetTransactions => sender() ! Transactions(transactions)
       case GetBalance(userId) =>
-//        sender() ! Balance(userId, transactions.filter(o => o.userId == userId).map(x => x.offer).sum.toString)
         sender() ! Balance(userId, transactions.filter(o => o.userId == userId).map(x => x.offer).sum.toString)
-      case GetBankStatement(userId, date1, date2) => sender() ! transactions.filter(o => o.userId == userId).filter(x => format.parse(x.date).after(format.parse(date1))).filter(x => format.parse(x.date).before(format.parse(date2)))
+      case GetBankStatement(userId, date1, date2) => sender() ! Transactions(transactions.filter(o => o.userId == userId).
+        filter(x => format.parse(x.date).after(format.parse(date1))).
+        filter(x => format.parse(x.date).before(format.parse(date2))))
       case GetPrincipal(userId) => sender() ! Principals(outstanding_debt.filter(x => x.userId==userId))
       case _ => log.info("Invalid message")
     }
@@ -98,6 +99,15 @@ object WebServer2 {
             // query the actor for the current auction state
             val outstanding: Future[Principals] = (bank ? GetPrincipal(userId)).mapTo[Principals]
             complete(outstanding)
+          }
+        }
+      }~path("BankStatements"){
+        get {
+          parameter("user", "date1", "date2") { (userId, date1, date2) =>
+            implicit val timeout: Timeout = 5.seconds
+            // query the actor for the current auction state
+            val statement: Future[Transactions] = (bank ? GetBankStatement(userId, date1, date2)).mapTo[Transactions]
+            complete(statement)
           }
         }
       }

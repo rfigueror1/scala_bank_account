@@ -1,6 +1,9 @@
 Bank accounts exercise in functional programming language Scala.
 
-In order to run the server, you should have installed IntelliJ.
+In order to run the server, you should have installed IntelliJ and scala, please find a script to automate the installation of scala 'install_scala.sh'. To make the file executable run `sudo chmod +x install_scala.sh` and to execute, run `./install_scala.sh`
+
+to install IntelliJ visit `https://www.jetbrains.com/idea/download/#section=linux`, download the compressed file.
+
 The project has both the source code and the sbt file. The sbt file is the dependencies manager in Akka and Scala
 
 In order to run the server, go to the folder where Intellij was installed and run the script `idea.sh` located in the `idea/bin` folder.
@@ -15,8 +18,8 @@ In order to test the server with different HTTP requests run the following comma
 2. To get the balance of an specific account run the following:
 `curl -X GET -H "Content-Type: application/json" -d '{}' 'http://localhost:8080/balance?user=RICK'`
 3. To get the bank statement for pair of dates run ``
-3. To get the accounts outstanding debts in different times run the following:
+4. To get the accounts outstanding debts in different times run the following:
 `curl -X GET -H "Content-Type: application/json" -d '{}' 'http://localhost:8080/outstandingPrincipal?user=RICK'`
 
 
-
+The client side was also implemented with a generic function to make requests of the previously described types.

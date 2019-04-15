@@ -17,7 +17,7 @@ In order to test the server with different HTTP requests run the following comma
 `, specifying altogether the amount, the id of the account (which in this case I chose it to be a string but could also had been a UUID, and the type of transaction.
 2. To get the balance of an specific account run the following:
 `curl -X GET -H "Content-Type: application/json" -d '{}' 'http://localhost:8080/balance?user=RICK'`
-3. To get the bank statement for pair of dates run ``
+3. To get the bank statement for pair of dates run `curl -X GET -H "Content-Type: application/json" -d '{}' 'http://localhost:8080/BankStatements?user=RICK&date1=2019-04-15&date2=2019-05-15'`
 4. To get the accounts outstanding debts in different times run the following:
 `curl -X GET -H "Content-Type: application/json" -d '{}' 'http://localhost:8080/outstandingPrincipal?user=RICK'`
 

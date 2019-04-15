@@ -1,5 +1,4 @@
 import java.text.SimpleDateFormat
-
 import akka.actor.{Actor, ActorLogging, ActorSystem, Props}
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.model.StatusCodes
@@ -52,7 +51,6 @@ object WebServer {
 
   // these are from spray-json
   val format = new SimpleDateFormat("yyyy-MM-dd")
-//  val date = format.parse("2018-03-03")
 
   implicit val principalFormat = jsonFormat3(Principal)
   implicit val bidFormat = jsonFormat4(Transaction)
@@ -74,7 +72,9 @@ object WebServer {
           parameter("bid".as[Int], "user", "typ") { (bid, user, typ) =>
             // place a bid, fire-and-forget
             val now = Calendar.getInstance()
-            bank ! Transaction(user, bid, typ, now.toString)
+            val date = now.getTime
+            val date1 = format.format(date)
+            bank ! Transaction(user, bid, typ, date1)
             complete((StatusCodes.Accepted, "bid placed"))
           }
         } ~

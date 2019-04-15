@@ -16,7 +16,7 @@ object Client {
     val user = "RICK"
     val typ = "Loan"
 
-    def make_request(user:String, bid:String, typeof:String, request1:String){
+    def make_request(user:String, bid:String, typeof:String, request1:String, date1:Option[String]=None, date2:Option[String]=None){
       if(request1 == "make transaction"){
         val responseFuture: Future[HttpResponse] = Http().singleRequest(HttpRequest(uri = "http://localhost:8080/?bid=${bid}&user=${user}&typ=${typeof}"))
         responseFuture
@@ -42,6 +42,16 @@ object Client {
             case Failure(_) => sys.error("something wrong")
           }
       }
+
+      if(request1 == "check bank statement"){
+        val responseFuture1: Future[HttpResponse] = Http().singleRequest(HttpRequest(uri = "http://localhost:8080/balance?user=${user}&date1=${date1}&date2={date2}"))
+        responseFuture1
+          .onComplete {
+            case Success(res) => println(res)
+            case Failure(_) => sys.error("something wrong")
+          }
+      }
+
 
     }
 

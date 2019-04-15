@@ -5,30 +5,6 @@
       <change afterPath="$PROJECT_DIR$/src/main/scala/Client.scala" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/scala/WebServer.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/WebServer2.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/META-INF/akkahttp-quickstart.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$Balance$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$Balance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$Banks$$anonfun$receive$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$Banks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$GetBalance$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$GetBalance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$GetBankStatement$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$GetBankStatement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$GetPrincipal$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$GetPrincipal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$GetTransactions$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$Principal$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$Principal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$Principals$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$Principals.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$Transaction$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$Transaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$Transactions$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2$Transactions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer2.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,8 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/WebServer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+            <state relative-caret-position="330">
+              <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -69,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Client.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="540">
+              <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -92,6 +68,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>accoun</find>
+      <find>date</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,8 +107,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,6 +136,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -180,7 +157,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.WebServer">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="akkahttp-quickstart" />
@@ -224,8 +201,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Client" />
         <item itemvalue="Application.WebServer" />
+        <item itemvalue="Application.Client" />
         <item itemvalue="Application.WebServer2" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.SimpleAccountApp" />
@@ -302,7 +279,7 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Learn" order="4" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2603834" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2630458" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="0" weight="0.32942432" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -342,7 +319,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/SimpleAccountActorRepository.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/AccountDirectives.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/ValidatorDirectives.scala" />
-    <entry file="file://$PROJECT_DIR$/src/main/scala/WebServer.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/Validator.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/SimpleAccountActor.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/ApiError.scala" />
@@ -361,10 +337,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Client.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="540">
+          <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
@@ -373,8 +356,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/WebServer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+        <state relative-caret-position="330">
+          <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
